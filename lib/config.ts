@@ -13,9 +13,9 @@ export const STARTER_PROMPTS: StartScreenPrompt[] = [
   },
 ];
 
-export const PLACEHOLDER_INPUT = "Ask anything...";
+export const PLACEHOLDER_INPUT = "Pergunte para a assistente";
 
-export const GREETING = "How can I help you today?";
+export const GREETING = "Olá! Como posso te ajudar hoje?";
 
 export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
   color: {
@@ -29,7 +29,7 @@ export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
       level: 1,
     },
   },
-  radius: "round",
+  radius: "pill",
   // Add other theme options here
   // chatkit.studio/playground to explore config options
 });

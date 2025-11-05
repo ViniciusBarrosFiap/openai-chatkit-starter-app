@@ -264,18 +264,18 @@ export function ChatKitPanel({
   const chatkit = useChatKit({
     api: { getClientSecret },
     theme: {
-      colorScheme: theme,
+      colorScheme: "light",
       ...getThemeConfig(theme),
     },
     startScreen: {
       greeting: GREETING,
-      prompts: STARTER_PROMPTS,
+      // prompts: STARTER_PROMPTS,
     },
     composer: {
       placeholder: PLACEHOLDER_INPUT,
       attachments: {
         // Enable attachments
-        enabled: true,
+        enabled: false,
       },
     },
     threadItemActions: {
