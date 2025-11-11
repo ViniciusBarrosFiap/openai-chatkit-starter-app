@@ -347,35 +347,7 @@ export function ChatKitPanel({
   }
 
   return (
-    <div className="relative pb-0 flex h-[90vh] w-full rounded-2xl flex-col overflow-hidden bg-white transition-colors bg-white">
-      {/* Loader personalizado durante a inicialização */}
-      {isInitializingSession && !blockingError && (
-        <div className="absolute inset-0 flex items-center justify-center text-gray-500 z-10 bg-white">
-          Iniciando assistente...
-        </div>
-      )}
-
-      {/* Renderiza o ChatKit só quando estiver pronto */}
-      {chatkit.control && !blockingError && !isInitializingSession && (
-        <ChatKit
-          key={widgetInstanceKey}
-          control={chatkit.control}
-          className="block h-full w-full"
-        />
-      )}
-
-      {/* Overlay de erro, se necessário */}
-      {(blockingError || isInitializingSession) && (
-        <ErrorOverlay
-          error={blockingError}
-          fallbackMessage={
-            blockingError ? null : "Iniciando assistente, aguarde..."
-          }
-          onRetry={blockingError && errors.retryable ? handleResetChat : null}
-          retryLabel="Reiniciar chat"
-        />
-      )}
-    </div>
+    <div className="relative pb-0 flex h-[90vh] w-full rounded-2xl flex-col overflow-hidden bg-white transition-colors bg-white"> <ChatKit key={widgetInstanceKey} control={chatkit.control} className={ blockingError || isInitializingSession ? "pointer-events-none opacity-0" : "block h-full w-full" } /> <ErrorOverlay error={blockingError} fallbackMessage={ blockingError || !isInitializingSession ? null : "Loading assistant session..." } onRetry={blockingError && errors.retryable ? handleResetChat : null} retryLabel="Restart chat" /> </div>
   );
 }
 
