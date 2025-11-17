@@ -13,9 +13,9 @@ export const STARTER_PROMPTS: StartScreenPrompt[] = [
   },
 ];
 
-export const PLACEHOLDER_INPUT = "Pergunte para a assistente";
+export const PLACEHOLDER_INPUT = "Quais são suas dúvidas hoje?";
 
-export const GREETING = "Olá! Como posso te ajudar hoje?";
+export const GREETING = "Olá! Sou o assessor contábil inteligente da Contabilizei.";
 
 export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
   color: {

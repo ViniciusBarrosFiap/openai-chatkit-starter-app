@@ -270,6 +270,9 @@ export function ChatKitPanel({
     history: {
       enabled: false
     },
+    header: { 
+      enabled: false 
+    },
     startScreen: {
       greeting: GREETING,
       // prompts: STARTER_PROMPTS,
